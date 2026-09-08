@@ -47,18 +47,18 @@ Traditional finance apps focus exclusively on **retrospective reporting**—show
 
 ```mermaid
 flowchart TD
-    subgraph Client (React 18 + Vite + Tailwind CSS)
+    subgraph Client ["Client (React 18 + Vite + Tailwind CSS)"]
         UI[App UI Layout / Pages]
         AS[AuthContext & ProtectRoute]
         FE[financialCalculations & simulationEngine]
     end
 
-    subgraph Backend (Node.js Express Server)
-        API[Express App /api/insights/explain]
-        AIS[aiService.ts Fact-Grounding Engine]
+    subgraph Backend ["Backend (Node.js Express Server)"]
+        API["Express App /api/insights/explain"]
+        AIS["aiService.ts Fact-Grounding Engine"]
     end
 
-    subgraph Data & Cloud Services
+    subgraph Cloud ["Data & Cloud Services"]
         SB[(Supabase PostgreSQL + RLS)]
         GEM[(Google Gemini API Cloud)]
     end
